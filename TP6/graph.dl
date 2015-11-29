@@ -10,3 +10,6 @@ e(f,g).
 p(X,Y) :- e(X,Z), p(Z,Y).
 p(X,Y) :- e(X,Y).
 
+impair(X,Y) :- e(X,Y)
+impair(X,Y) :- pair(X,Y) +1.
+pair(X,Y) :- impair(X,Y) +1.

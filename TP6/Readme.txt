@@ -42,3 +42,13 @@ Q17 :
 
 Q22 : 
 	((the DET)(man N) NP )((sings V)((a DET)(song N) NP) VP)
+
+Q27 : 
+	L'homme observe avec un téléscope la licorne. 
+
+	Soit c'est l'homme qui observe avec le téléscope ; soit l'homme voit une licorne avec un téléscope dans ce cas c'est la licorne qui a le téléscope. 
+
+Q30-31 : 
+	ces questions ont été faites en complétant les fichiers déjà existant (grammaire1 ...).
+
+
