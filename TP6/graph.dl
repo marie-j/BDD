@@ -1,0 +1,12 @@
+e(a,b).
+e(b,c).
+e(b,f).
+e(d,a).
+e(d,e).
+e(e,f).
+e(e,g).
+e(f,g).
+
+p(X,Y) :- e(X,Z), p(Z,Y).
+p(X,Y) :- e(X,Y).
+

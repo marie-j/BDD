@@ -1,0 +1,32 @@
+Jones Marie
+
+TP3 BDD 
+
+1 : select anom as Article ,count(acoul) as nb_coul from Articles group by anom;  
+
+2 : select anom,min(prix),max(prix),count(fid) from Catalogue left join Articles on Articles.aid= Catalogue.aid group by anom,fid having  count(fid) >1 order by avg(prix) desc;
+
+3 : select acoul  from Articles group by acoul having count(aid)= 1; 
+
+4 : (select acoul as Couleur, avg(prix) as Prix_moyen from Catalogue join Articles on Articles.aid = Catalogue.aid group by acoul having count(acoul) >1 order by avg(prix) desc) except (select acoul,avg(prix) from Articles join Catalogue on Articles.aid = Catalogue.aid where anom='%Ferrari%' group by acoul);
+
+5 : select anom,acoul,count(fid) from Articles left join Catalogue on Articles.aid = Catalogue.aid group by anom,acoul;
+
+6 : select Articles.aid,count(fid) from Articles full join Catalogue on Articles.aid = Catalogue.aid group by Articles.aid order by Articles.aid asc;
+
+7 : select fnom as fournisseur,count(aid) from Catalogue join Fournisseurs on Fournisseurs.fid = Catalogue.fid group by fnom having count(aid) >1
+
+8 : 
+select fnom,anom,count(acoul) from Fournisseurs natural join Articles natural join Catalogue group by fnom,anom having count(acoul) >1
+
+9: 
+select anom from Catalogue natural join Articles natural join Fournisseurs group by anom having count(fid) =1;
+
+10 : 
+select left(anom,1) as lettre,count(substring(anom from 0 for 1)) from Articles group by anom order by anom asc
+
+11 : 
+select left(acoul,1) as lettre,count(substring(acoul from 0 for 1)) from Articles group by  acoul order by acoul asc
+
+12 : 
+Les résultats de la requête sont la même . En revanche avec "using" il faut que les attributs portent le même nom dans les deux tables . 
